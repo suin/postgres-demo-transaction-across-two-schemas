@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:9.6.4
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./:/app
+    working_dir: /app
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
